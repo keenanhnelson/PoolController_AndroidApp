@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/myButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="One"
+        app:layout_constraintLeft_toRightOf="@+id/myButton2"
+        app:layout_constraintTop_toTopOf="@+id/myButton2" />
+
+    <Button
+        android:id="@+id/myButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Two"
+        app:layout_constraintBottom_toTopOf="@+id/myPlusButton"
+        app:layout_constraintRight_toRightOf="@+id/myPlusButton" />
+
+    <Button
+        android:id="@+id/myButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Three"
+        app:layout_constraintRight_toLeftOf="@+id/myButton2"
+        app:layout_constraintTop_toTopOf="@+id/myButton2" />
+
+    <Button
+        android:id="@+id/myPlusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plus"
+        app:layout_constraintBottom_toTopOf="@+id/myMenuButton"
+        app:layout_constraintRight_toRightOf="@+id/myMenuButton" />
+
+    <Button
+        android:id="@+id/myRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        app:layout_constraintLeft_toRightOf="@+id/myMenuButton"
+        app:layout_constraintTop_toTopOf="@+id/myMenuButton" />
+
+    <Button
+        android:id="@+id/myMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="Menu"
+        app:layout_constraintBottom_toTopOf="@+id/myMinusButton"
+        app:layout_constraintRight_toLeftOf="@+id/TakeImageButton" />
+
+    <Button
+        android:id="@+id/myLeftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        app:layout_constraintRight_toLeftOf="@+id/myMenuButton"
+        app:layout_constraintTop_toTopOf="@+id/myMenuButton" />
+
+    <Button
+        android:id="@+id/myMinusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="Minus"
+        app:layout_constraintBottom_toTopOf="@+id/DisplayTakenImageButton"
+        app:layout_constraintRight_toRightOf="@+id/DisplayTakenImageButton" />
+
+    <Button
+        android:id="@+id/DisplayBeforeImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Before"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/DisplayAfterImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="After"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/myBeforeImageView"
+        android:layout_width="322dp"
+        android:layout_height="215dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/myButton2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578"
+        app:srcCompat="@drawable/beforeone" />
+
+    <ImageView
+        android:id="@+id/myAfterImageView"
+        android:layout_width="321dp"
+        android:layout_height="215dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/myButton2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.583"
+        app:srcCompat="@drawable/afterone" />
+
+    <Button
+        android:id="@+id/TakeImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TakeImage"
+        app:layout_constraintStart_toEndOf="@+id/myMinusButton"
+        app:layout_constraintTop_toTopOf="@+id/myMinusButton" />
+
+    <Button
+        android:id="@+id/DisplayTakenImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taken"
+        app:layout_constraintRight_toLeftOf="@+id/DisplayAfterImageButton"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/DisplayBeforeImageButton"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp" />
+
+    <ImageView
+        android:id="@+id/TakenImageView"
+        android:layout_width="309dp"
+        android:layout_height="216dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/myButton2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/IP_Address"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Enter IP"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/myButton3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/myTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/DisplayTakenImageButton"
+        app:layout_constraintStart_toStartOf="@+id/DisplayTakenImageButton" />
+
+    <EditText
+        android:id="@+id/editTextPortNumber"
+        android:layout_width="104dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:hint="Enter Port"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/IP_Address"
+        app:layout_constraintTop_toTopOf="@+id/IP_Address" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="IP Address"
+        app:layout_constraintBottom_toTopOf="@+id/IP_Address"
+        app:layout_constraintStart_toStartOf="@+id/IP_Address" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Port Number"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPortNumber"
+        app:layout_constraintStart_toStartOf="@+id/editTextPortNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
