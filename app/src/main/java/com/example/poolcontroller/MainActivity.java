@@ -308,9 +308,12 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("IO:", e.getMessage(), e);}
             finally {
                 if(s!=null)
-                    try {s.close();
+                    try {
+                        s.close();
                     }
-                    catch (IOException e) {}
+                    catch (IOException e) {
+                        Log.e("s.close", e.getMessage(), e);
+                    }
             }
         }
     };
